@@ -153,7 +153,7 @@ fork(void)
   //setup new user stack
   // and registers (np->tf->eip) instruction pt
   // and (npt->tf->esp) stck pt)
-
+///asdfasdfasdfas
   for(i = 0; i < NOFILE; i++)
     if(proc->ofile[i])
       np->ofile[i] = filedup(proc->ofile[i]);
