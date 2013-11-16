@@ -91,8 +91,8 @@ userinit(void)
   p->tf->es = p->tf->ds;
   p->tf->ss = p->tf->ds;
   p->tf->eflags = FL_IF;
-  p->tf->esp = PGSIZE;
-  p->tf->eip = 0;  // beginning of initcode.S
+  p->tf->esp = PGSIZE;											//init stack ptr
+  p->tf->eip = 0;  // beginning of initcode.S					//init instruction ptr
 
   safestrcpy(p->name, "initcode", sizeof(p->name));
   p->cwd = namei("/");
@@ -135,13 +135,6 @@ fork(void)
     return -1;
 
   // Copy process state from p.
-
-  //point this to same page directory as parent's not a
-  //new one
-
-  // need to change this
-  // we want the same addr space not a copy
-
   if((np->pgdir = copyuvm(proc->pgdir, proc->sz)) == 0){
     kfree(np->kstack);
     np->kstack = 0;
@@ -151,17 +144,7 @@ fork(void)
   np->sz = proc->sz;
   np->parent = proc;
   *np->tf = *proc->tf;//making full copy of the trap frame
-
-  np->tf->eax = 0;//eax is in the trap frame so it can return something diff
-
-  // Clear %eax so that fork returns 0 in the child.
-
-// pretending this is clone not fork
-  //setup new user stack
-  // and registers (np->tf->eip) instruction pt
-  // and (npt->tf->esp) stck pt)
-
-
+  np->tf->eax = 0;
   for(i = 0; i < NOFILE; i++)
     if(proc->ofile[i])
       np->ofile[i] = filedup(proc->ofile[i]);
@@ -172,6 +155,7 @@ fork(void)
   safestrcpy(np->name, proc->name, sizeof(proc->name));
   return pid;
 }
+
 
 // Exit the current process.  Does not return.
 // An exited process remains in the zombie state

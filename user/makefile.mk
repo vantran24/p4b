@@ -8,6 +8,7 @@ USER_PROGS := \
 	init\
 	kill\
 	ln\
+	hello\
 	ls\
 	mkdir\
 	rm\
