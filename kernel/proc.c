@@ -135,6 +135,8 @@ fork(void)
     return -1;
 
   // Copy process state from p.
+  // need to change this
+  // we want the same addr space not a copy
   if((np->pgdir = copyuvm(proc->pgdir, proc->sz)) == 0){
     kfree(np->kstack);
     np->kstack = 0;
@@ -143,10 +145,12 @@ fork(void)
   }
   np->sz = proc->sz;
   np->parent = proc;
-  *np->tf = *proc->tf;
+  *np->tf = *proc->tf;//making full copy of the trap frame
+
 
   // Clear %eax so that fork returns 0 in the child.
-  np->tf->eax = 0;
+  np->tf->eax = 0;//eax is in the trap frame so it can return something diff
+
 
   for(i = 0; i < NOFILE; i++)
     if(proc->ofile[i])
