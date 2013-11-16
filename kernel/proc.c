@@ -135,6 +135,8 @@ fork(void)
     return -1;
 
   // Copy process state from p.
+  //point this to same page directory as parent's not a
+  //new one
   if((np->pgdir = copyuvm(proc->pgdir, proc->sz)) == 0){
     kfree(np->kstack);
     np->kstack = 0;
@@ -147,6 +149,10 @@ fork(void)
 
   // Clear %eax so that fork returns 0 in the child.
   np->tf->eax = 0;
+// pretending this is clone not fork
+  //setup new user stack
+  // and registers (np->tf->eip) instruction pt
+  // and (npt->tf->esp) stck pt)
 
   for(i = 0; i < NOFILE; i++)
     if(proc->ofile[i])
