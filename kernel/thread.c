@@ -103,7 +103,7 @@ void thread_join()
 /*spinlock
  *
  */
-void initlock(struct lock_t *lk)
+void init_lock(struct lock_t *lk)
 {
   lk->locked = 0; 	//is it locked?
   lk->cpu = 0;		//cpu holding lock

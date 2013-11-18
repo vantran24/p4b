@@ -25,7 +25,7 @@ struct cond_t {
 
 void *thread_create(void (*start_routine)(void*), void *arg);
 void thread_join();
-void initlock(struct lock_t *lk);
+void init_lock(struct lock_t *lk);
 void lock_acquire(struct lock_t *lk);
 void lock_release(struct lock_t *lk);
 void cv_wait(struct cond_t *cv, struct lock_t *lk);
