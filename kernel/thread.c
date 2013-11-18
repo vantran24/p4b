@@ -16,6 +16,7 @@
 // Sets up stack to return as if from system call.
 // Caller must set state of returned proc to RUNNABLE.
 
+/*
 //before clone is called need to call malloc to make user stack
 //then send that pointer to clone
 int clone(void(*fcn)(void*), void *arg, void *stack)
@@ -84,6 +85,7 @@ int join (void **stack)
 {
 	return wait();//change the existing wait()
 }
+*/
 
 void *thread_create(void (*start_routine)(void*), void *arg)
 {
