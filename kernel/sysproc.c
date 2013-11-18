@@ -5,15 +5,18 @@
 #include "mmu.h"
 #include "proc.h"
 #include "sysfunc.h"
-int sys_join ()
+int sys_join (void)
 {
-	return join (void **stack);
+	return 0;
+	//return join (void **stack);
+	//join (void **stack);
 }
 int
 sys_clone(void)
 {
 	//clone might need params
-	return clone(void(*fcn)(void*), void *arg, void*stack);
+	//return clone(void(*fcn)(void*), void *arg, void *stack);
+	return 0;
 }
 int
 sys_fork(void)
