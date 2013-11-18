@@ -99,7 +99,8 @@ struct proc*    copyproc(struct proc*);
 void            exit(void);
 int             fork(void);
 //added think it should be proc.c
-//int 			clone(void(*fcn)(void*), void *arg, void*stack);
+int 			clone(void(*fcn)(void*), void *arg, void*stack);
+int 			join (void **stack);
 int             growproc(int);
 int             kill(int);
 void            pinit(void);

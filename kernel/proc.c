@@ -33,13 +33,14 @@ static struct proc*
 allocproc(void)
 {
   struct proc *p;
-  char *sp;
+  char *sp;//stack pointer
 
-  acquire(&ptable.lock);
-  for(p = ptable.proc; p < &ptable.proc[NPROC]; p++)
+  acquire(&ptable.lock);//lock
+  for(p = ptable.proc; p < &ptable.proc[NPROC]; p++)//running through
+	  	  	  	  	  	  	  	  	  	  	  	  	//page table
     if(p->state == UNUSED)
       goto found;
-  release(&ptable.lock);
+  release(&ptable.lock);//unlock
   return 0;
 
 found:
@@ -52,7 +53,7 @@ found:
     p->state = UNUSED;
     return 0;
   }
-  sp = p->kstack + KSTACKSIZE;
+  sp = p->kstack + KSTACKSIZE;//put the stack pointer at the bottom
   
   // Leave room for trap frame.
   sp -= sizeof *p->tf;
@@ -61,10 +62,10 @@ found:
   // Set up new context to start executing at forkret,
   // which returns to trapret.
   sp -= 4;
-  *(uint*)sp = (uint)trapret;
+  *(uint*)sp = (uint)trapret;//
 
-  sp -= sizeof *p->context;
-  p->context = (struct context*)sp;
+  sp -= sizeof *p->context;//context switch
+  p->context = (struct context*)sp;//casting
   memset(p->context, 0, sizeof *p->context);
   p->context->eip = (uint)forkret;
 
@@ -213,15 +214,17 @@ wait(void)
     // Scan through table looking for zombie children.
     havekids = 0;
     for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
-      if(p->parent != proc)
+    	//going through the process table
+      if(p->parent != proc) //if it is not the parent
         continue;
-      havekids = 1;
-      if(p->state == ZOMBIE){
+      havekids = 1;//means proc has kids
+      if(p->state == ZOMBIE){//zombie means that it is done running but
+    	  	  	  	  	  	 //has not terminated
         // Found one.
         pid = p->pid;
         kfree(p->kstack);
         p->kstack = 0;
-        freevm(p->pgdir);
+        freevm(p->pgdir);//frees addr space
         p->state = UNUSED;
         p->pid = 0;
         p->parent = 0;

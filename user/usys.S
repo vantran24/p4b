@@ -30,4 +30,5 @@ SYSCALL(sbrk)
 SYSCALL(sleep)
 SYSCALL(uptime)
 //new syscall
-//SYSCALL(clone)
+SYSCALL(clone)
+SYSCALL(join)

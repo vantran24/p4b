@@ -6,7 +6,8 @@ struct stat;
 // system calls
 int fork(void);
 //added
-//int clone (void(*fcn)(void*), void *arg, void*stack);
+int clone (void(*fcn)(void*), void *arg, void*stack);
+int join (void **stack);
 int exit(void) __attribute__((noreturn));
 int wait(void);
 int pipe(int*);
