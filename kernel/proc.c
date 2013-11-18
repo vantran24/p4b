@@ -200,9 +200,9 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
   stack -= sizeof fcn;					//return addr on next
   fcn = stack;
   stack -= sizeof thread->tf->eip;		//instr pointer
-  thread->tf->eip = stack;
+  (void*)thread->tf->eip = stack;
   stack -= sizeof thread->tf->esp;		//stack pointer
-  thread->tf->esp = stack;
+  (void*)thread->tf->esp = stack;
 
 
   for(i = 0; i < NOFILE; i++)//NOFILE: num of open files
