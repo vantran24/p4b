@@ -8,7 +8,7 @@
 int sys_join (void)
 {
 	void **stack;
-	if (argptr(0, (void**)&stack, sizeof(stack)) < 0){
+	if (argptr(0, (void*)&stack, sizeof(stack)) < 0){
 			return -1;
 	}
 	return join (stack);
