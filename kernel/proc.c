@@ -176,7 +176,7 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
   // need to change this
   // we want the same addr space not a copy
   //if((np->pgdir = copyuvm(proc->pgdir, proc->sz)) == 0){
-  thread->pgdir = proc->pgdir//sets addr space same as the
+  thread->pgdir = proc->pgdir;//sets addr space same as the
 	  	  	  	  	  	  	  	  	  	 //parent
     kfree(thread->kstack);
     thread->kstack = 0; 		//bottom of the kernel stack
