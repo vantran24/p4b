@@ -5,6 +5,7 @@
 #include "mmu.h"
 #include "proc.h"
 #include "sysfunc.h"
+#include "thread.h"
 int sys_join (void)
 {
 	void **stack;
