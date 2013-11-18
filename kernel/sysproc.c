@@ -7,16 +7,29 @@
 #include "sysfunc.h"
 int sys_join (void)
 {
-	return 0;
-	//return join (void **stack);
-	//join (void **stack);
+	void **stack;
+	if (argptr(0, (void**)&stack, sizeof(stack)) < 0){
+			return -1;
+	}
+	return join (stack);
 }
 int
 sys_clone(void)
 {
-	//clone might need params
-	//return clone(void(*fcn)(void*), void *arg, void *stack);
-	return 0;
+	void(*fcn)(void*);
+	void *arg;
+	void *stack;
+	if (argptr(0, (void*)&fcn, sizeof(fcn)) < 0){
+		return -1;
+	}
+	if (argptr(1, (void*)&arg, sizeof(arg)) < 0){
+			return -1;
+	}
+	if (argptr(2, (void*)&stack, sizeof(stack)) < 0){
+			return -1;
+	}
+	return clone(fcn, arg, stack);
+
 }
 int
 sys_fork(void)

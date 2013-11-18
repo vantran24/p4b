@@ -94,13 +94,13 @@ void            pipeclose(struct pipe*, int);
 int             piperead(struct pipe*, char*, int);
 int             pipewrite(struct pipe*, char*, int);
 
+// thread.c
+int 			clone(void(*fcn)(void*), void *arg, void*stack);
+int 			join (void **stack);
 // proc.c
 struct proc*    copyproc(struct proc*);
 void            exit(void);
 int             fork(void);
-//added think it should be proc.c
-int 			clone(void(*fcn)(void*), void *arg, void*stack);
-int 			join (void **stack);
 int             growproc(int);
 int             kill(int);
 void            pinit(void);
