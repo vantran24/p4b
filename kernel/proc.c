@@ -179,11 +179,8 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
   //point this to same page directory as parent's not a
   //new one
 
-  // need to change this
-  // we want the same addr space not a copy
-  //if((np->pgdir = copyuvm(proc->pgdir, proc->sz)) == 0){
-  thread->pgdir = proc->pgdir;//sets addr space same as the
-	  	  	  	  	  	  	  	  	  	 //parent
+  //sets addr space same as the parent
+  thread->pgdir = proc->pgdir;
   //kfree(thread->kstack);
   //thread->kstack = 0; 		//bottom of the kernel stack
   //thread->state = UNUSED;
@@ -204,24 +201,26 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
   usptr = (int) stack + PGSIZE;
   userstk[0] = 0xffffffff;
   userstk[1] = (uint) arg;
- // stack += PGSIZE; 						//set pointer to the bottom of the stack
-  	  	  	  	  	  	  	  	  	    //so we can grow it backward
-  //stack -= sizeof (uint);
-  //stack = (void*) 0xffffffff;					//fake addr
- // stack -= sizeof arg;  				//put on arg on first
- // stack = arg;
-//  stack -= sizeof fcn;					//return addr on next
-//  stack = fcn;
+
+//  stack += PGSIZE; 						//set pointer to the bottom of the stack
+//  	  	  	  	  	  	  	  	  	    //so we can grow it backward
+//  stack -= sizeof (uint);
+//  stack = (void*) 0xffffffff;					//fake addr
+//  stack -= sizeof arg;  				//put on arg on first
+//  stack = arg;
+  //stack -= sizeof fcn;					//return addr on next
+  //stack = fcn;
   //stack -= sizeof thread->tf->eip;		//instr pointer
 
 
-  usptr -= 2*sizeof (uint);
+  //usptr -= 2*sizeof (uint);
   copyout(thread->pgdir, usptr, userstk, 2*sizeof (uint));
   //stack = (void *) thread->tf->eip;
   thread->tf->eip = (uint)fcn;
   //stack -= sizeof thread->tf->esp;		//stack pointer
   //stack = (void *) thread->tf->esp;
   //thread->tf->esp = (uint) stack;
+
   thread->tf->esp = usptr;
   for(i = 0; i < NOFILE; i++)//NOFILE: num of open files
     if(proc->ofile[i])
