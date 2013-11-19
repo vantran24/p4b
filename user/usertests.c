@@ -195,7 +195,7 @@ void
 exectest(void)
 {
   printf(stdout, "exec test\n");
-  if(exec("echo", echoargv) < 0){
+  if(exec("echo", echoargv)< 0){
     printf(stdout, "exec echo failed\n");
     exit();
   }
@@ -265,7 +265,13 @@ preempt(void)
   if(pid1 == 0)
     for(;;)
       ;
-
+#include "types.h"
+#include "stat.h"
+#include "user.h"
+#include "fs.h"
+#include "fcntl.h"
+#include "syscall.h"
+#include "traps.h"
   pid2 = fork();
   if(pid2 == 0)
     for(;;)

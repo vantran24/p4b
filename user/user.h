@@ -1,21 +1,21 @@
 #ifndef _USER_H_
 #define _USER_H_
 
+
 // Mutual exclusion lock.
 struct lock_t {
-  uint locked;       // Is the lock held?
+	uint  locked;       // Is the lock held?
 
   // For debugging:
   char *name;        // Name of lock.
   struct cpu *cpu;   // The cpu holding the lock.
-  uint pcs[10];      // The call stack (an array of program counters)
+  unsigned int  pcs[10];      // The call stack (an array of program counters)
                      // that locked the lock.
 };
 
 struct cond_t {
-	uint true;		 //condition true or not
+	uint  true;		 //condition true or not
 };
-
 
 struct stat;
 

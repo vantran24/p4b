@@ -9,7 +9,9 @@ USER_PROGS := \
 	kill\
 	ln\
 	clonetest\
+	badclone\
 	hello\
+	thread\
 	ls\
 	mkdir\
 	rm\
