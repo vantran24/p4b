@@ -6,7 +6,7 @@
  */
 #include "types.h"
 #include "defs.h"
-#include "param.h"//NOFILE is in herr
+#include "param.h"//NOFILE is in herr (number of open files)
 #include "mmu.h"//PGSIZE is in herrr
 #include "x86.h"
 #include "proc.h"

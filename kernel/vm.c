@@ -207,7 +207,7 @@ loaduvm(pde_t *pgdir, char *addr, struct inode *ip, uint offset, uint sz)
   uint i, pa, n;
   pte_t *pte;
 
-  if((uint)addr % PGSIZE != 0){
+  if((uint)addr % PGSIZE != 0)
     panic("loaduvm: addr must be page aligned");
   for(i = 0; i < sz; i += PGSIZE){
     if((pte = walkpgdir(pgdir, addr+i, 0)) == 0)

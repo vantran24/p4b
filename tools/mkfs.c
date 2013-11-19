@@ -63,7 +63,7 @@ xint(uint x)
   return y;
 }
 
-
+//making file system
 int 
 mkfs(int nblocks, int ninodes, int size) {
 

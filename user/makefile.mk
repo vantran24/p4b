@@ -8,6 +8,7 @@ USER_PROGS := \
 	init\
 	kill\
 	ln\
+	clonetest\
 	hello\
 	ls\
 	mkdir\

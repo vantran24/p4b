@@ -97,6 +97,7 @@ int             pipewrite(struct pipe*, char*, int);
 // thread.c
 int 			clone(void(*fcn)(void*), void *arg, void*stack);
 int 			join (void **stack);
+int				test (int n, int m);
 // proc.c
 struct proc*    copyproc(struct proc*);
 void            exit(void);

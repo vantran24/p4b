@@ -6,6 +6,20 @@
 #include "proc.h"
 #include "sysfunc.h"
 #include "thread.h"
+
+int sys_test (void)
+{
+	int n;
+	int m;
+	if (argint(0, (void*)&n) < 0){
+		return -1;
+	}
+	if (argint(1, (void*)&m) < 0){
+			return -1;
+		}
+	return test(n, m);
+}
+
 int sys_join (void)
 {
 	void **stack;
@@ -30,7 +44,6 @@ sys_clone(void)
 			return -1;
 	}
 	return clone(fcn, arg, stack);
-
 }
 int
 sys_fork(void)

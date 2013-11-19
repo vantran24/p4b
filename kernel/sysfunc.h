@@ -26,5 +26,6 @@ int sys_uptime(void);
 //added
 int sys_clone(void);
 int sys_join(void);
+int sys_test(void);
 
 #endif // _SYSFUNC_H_

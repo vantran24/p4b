@@ -107,6 +107,7 @@ static int (*syscalls[])(void) = {
 //added
 [SYS_clone]	  sys_clone,
 [SYS_join]	  sys_join,
+[SYS_test]	  sys_test,
 };
 
 // Called on a syscall trap. Checks that the syscall number (passed via eax)

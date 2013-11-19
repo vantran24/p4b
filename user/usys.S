@@ -29,6 +29,8 @@ SYSCALL(getpid)
 SYSCALL(sbrk)
 SYSCALL(sleep)
 SYSCALL(uptime)
-//new syscall
+//new syscalls
 SYSCALL(clone)
 SYSCALL(join)
+//new syscalls
+SYSCALL(test)

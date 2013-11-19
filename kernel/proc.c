@@ -156,6 +156,12 @@ fork(void)
   safestrcpy(np->name, proc->name, sizeof(proc->name));
   return pid;
 }
+
+int test (int n, int m)
+{
+	cprintf("this test blows x %d + %d\n", n, m);
+	return 0;
+}
 //before clone is called need to call malloc to make user stack
 //then send that pointer to clone
 //fcn is the start addr when it returns
@@ -193,27 +199,40 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
  // setup new user stack
  // and registers (np->tf->eip) instruction pt
  // and (np->tf->esp) stack pt)
-  stack += PGSIZE; 						//set pointer to the bottom of the stack
-  	  	  	  	  	    				//so we can grow it backward
-  stack -= sizeof arg;  				//put on arg on first
-  arg = stack;
-  stack -= sizeof fcn;					//return addr on next
-  fcn = stack;
-  stack -= sizeof thread->tf->eip;		//instr pointer
+  uint userstk [2];
+  uint usptr;
+  usptr = (int) stack + PGSIZE;
+  userstk[0] = 0xffffffff;
+  userstk[1] = (uint) arg;
+ // stack += PGSIZE; 						//set pointer to the bottom of the stack
+  	  	  	  	  	  	  	  	  	    //so we can grow it backward
+  //stack -= sizeof (uint);
+  //stack = (void*) 0xffffffff;					//fake addr
+ // stack -= sizeof arg;  				//put on arg on first
+ // stack = arg;
+//  stack -= sizeof fcn;					//return addr on next
+//  stack = fcn;
+  //stack -= sizeof thread->tf->eip;		//instr pointer
 
-  thread->tf->eip = (uint)stack;
-  stack -= sizeof thread->tf->esp;		//stack pointer
-  thread->tf->esp = (uint)stack;
 
-
+  usptr -= 2*sizeof (uint);
+  copyout(thread->pgdir, usptr, userstk, 2*sizeof (uint));
+  //stack = (void *) thread->tf->eip;
+  thread->tf->eip = (uint)fcn;
+  //stack -= sizeof thread->tf->esp;		//stack pointer
+  //stack = (void *) thread->tf->esp;
+  //thread->tf->esp = (uint) stack;
+  thread->tf->esp = usptr;
   for(i = 0; i < NOFILE; i++)//NOFILE: num of open files
     if(proc->ofile[i])
     	thread->ofile[i] = filedup(proc->ofile[i]);
   thread->cwd = idup(proc->cwd);
+  thread->pid = proc->pid;
 
-  pid = thread->pid;
   thread->state = RUNNABLE;//making the state runnable
-  safestrcpy(thread->name, proc->name, sizeof(proc->name));
+  pid = thread->pid;
+  //cprint()
+  //safestrcpy(thread->name, proc->name, sizeof(proc->name));
   return pid;//return of the pid of the new thread is returned to the parent
 }
 
