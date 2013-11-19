@@ -184,9 +184,9 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
   //if((np->pgdir = copyuvm(proc->pgdir, proc->sz)) == 0){
   thread->pgdir = proc->pgdir;//sets addr space same as the
 	  	  	  	  	  	  	  	  	  	 //parent
-  kfree(thread->kstack);
-  thread->kstack = 0; 		//bottom of the kernel stack
-  thread->state = UNUSED;
+  //kfree(thread->kstack);
+  //thread->kstack = 0; 		//bottom of the kernel stack
+  //thread->state = UNUSED;
 
   //these should be left the same
   thread->sz = proc->sz;
@@ -232,7 +232,7 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
   thread->state = RUNNABLE;//making the state runnable
   pid = thread->pid;
   //cprint()
-  //safestrcpy(thread->name, proc->name, sizeof(proc->name));
+  safestrcpy(thread->name, proc->name, sizeof(proc->name));
   return pid;//return of the pid of the new thread is returned to the parent
 }
 
