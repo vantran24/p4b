@@ -7,17 +7,17 @@
 
 
 //// Mutual exclusion lock.
-//struct lock_t {
-//	volatile uint  locked;       	// Is the lock held?
-//}lock_t;
-//
-//struct cond_t {
-//	uint  true;		 		//condition true or not
-//}cond_t;
+typedef struct __lock_t{
+	volatile uint  locked;       	// Is the lock held?
+}lock_t;
+
+typedef struct __cond_t {
+	uint  true;		 		//condition true or not
+}cont_t;
 
 //spinlock
 
-void lock_init(struct lock_t *lk)
+void lock_init(lock_t *lk)
 {
 	lk->locked = 0; 	//is it locked?
 	//lk->cpu = 0;		//cpu holding lock
@@ -27,7 +27,7 @@ void lock_init(struct lock_t *lk)
 // Loops (spins) until the lock is acquired.
 // Holding a lock for a long time may cause
 // other CPUs to waste time spinning to acquire it.
-void lock_acquire(struct lock_t *lk)
+void lock_acquire(lock_t *lk)
 {
 	//pushcli(); // disable interrupts to avoid deadlock.
 	//  if(holding(lk))
@@ -45,7 +45,7 @@ void lock_acquire(struct lock_t *lk)
 }
 
 // Release the lock.
-void lock_release(struct lock_t *lk)
+void lock_release(lock_t *lk)
 {
 	//  if(!holding(lk))
 	//    panic("release");
