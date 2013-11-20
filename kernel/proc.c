@@ -276,6 +276,7 @@ int join (void **stack)
 				p->parent = 0;
 				p->name[0] = 0;
 				p->killed = 0;
+				p->clonecalled = 0;
 				//pointer put in
 				release(&ptable.lock);
 				return pid;
