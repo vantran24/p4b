@@ -284,7 +284,7 @@ int join (void **stack)
 		}
 //p->clonecalled != 1
 		// No point waiting if we don't have any children.
-		if(!havekids || proc->killed || ){
+		if(!havekids || proc->killed ){
 			release(&ptable.lock);
 			return -1;
 		}
