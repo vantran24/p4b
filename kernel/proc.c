@@ -195,6 +195,7 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
 
 	//these should be left the same
 	thread->thrstk = stack;
+	thread->clonecalled = 1;
 	thread->sz = proc->sz;
 	thread->parent = proc;
 	*thread->tf = *proc->tf;		// making full copy of the trap frame
@@ -282,7 +283,7 @@ int join (void **stack)
 		}
 
 		// No point waiting if we don't have any children.
-		if(!havekids || proc->killed){
+		if(!havekids || proc->killed || p->clonecalled != 1){
 			release(&ptable.lock);
 			return -1;
 		}
