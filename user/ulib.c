@@ -37,7 +37,7 @@ void cv_wait(cond_t *cv, lock_t *lk ){
 }
 void cv_signal(cond_t *cv){
 	//wake a sleeping thread
-	wake1(cv);
+	wakeup1(cv);
 }
 
 char*

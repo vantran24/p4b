@@ -8,7 +8,7 @@ typedef struct __lock_t{
 
 typedef struct __cond_t {
 	uint  true;		 		//condition true or not
-}cont_t;
+}cond_t;
 
 struct stat;
 
@@ -21,7 +21,7 @@ int join (void **stack);
 //more added
 int test(int, int);
 void csleep(void *chan, lock_t *lk);
-static void wakeup1(void *chan);
+void wakeup1(void *chan);
 //
 int exit(void) __attribute__((noreturn));
 int wait(void);

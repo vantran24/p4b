@@ -11,6 +11,9 @@ USER_PROGS := \
 	clonetest\
 	badclone\
 	join\
+	cond3\
+	size\
+	cond\
 	thread2\
 	join3\
 	locks\

@@ -9,6 +9,7 @@ struct pipe;
 struct proc;
 struct spinlock;
 struct stat;
+
 typedef struct __lock_t{
 	volatile uint  locked;       	// Is the lock held?
 }lock_t;
@@ -121,8 +122,6 @@ void            yield(void);
 // swtch.S
 void            swtch(struct context**, struct context*);
 
-void 			cacquire(lock_t *lk);
-void 			crelease(lock_t *lk);
 // spinlock.c
 void            acquire(struct spinlock*);
 void            getcallerpcs(void*, uint*);

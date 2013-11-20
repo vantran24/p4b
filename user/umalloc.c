@@ -28,13 +28,11 @@ int thread_create(void (*start_routine)(void*), void *arg)
 {
 	// 1)call malloc():to create new user stack
 	// 2)call clone(): to create child thread
-	void * stack;
-	if ((stack = malloc(PGSIZE * 2)) != 0)
+	void * stack = malloc(PGSIZE * 2);
 	{
 		if ((uint)stack % PGSIZE) {
-			stack = stack + (4096 - (uint)stack % PGSIZE);
+			stack = stack + (4096 - (uint)stack % PGSIZE);//from debugging
 		}
-		//stack = malloc(sizeof PGSIZE);
 			int child = clone(start_routine, arg, stack);
 			return child;
 	}
@@ -46,7 +44,7 @@ int thread_join()
 	void** stack = malloc(sizeof(void));
 	//Call join(): frees the user stack and returns
 	int jpid = join(stack);
-	free(stack);
+	free(*stack);//
 	return jpid;
 }
 

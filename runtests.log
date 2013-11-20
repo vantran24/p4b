@@ -8,112 +8,8 @@ build xv6 using make
 Trying to clean project using make clean
 make clean
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/umalloc.c -MF user/umalloc.d -MT user/umalloc.d -MT user/umalloc.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/printf.c -MF user/printf.d -MT user/printf.d -MT user/printf.o
-gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/usys.S -MF user/usys.d -MT user/usys.d -MT user/usys.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/ulib.c -MF user/ulib.d -MT user/ulib.d -MT user/ulib.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/zombie.c -MF user/zombie.d -MT user/zombie.d -MT user/zombie.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/wc.c -MF user/wc.d -MT user/wc.d -MT user/wc.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/usertests.c -MF user/usertests.d -MT user/usertests.d -MT user/usertests.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/stressfs.c -MF user/stressfs.d -MT user/stressfs.d -MT user/stressfs.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/sh.c -MF user/sh.d -MT user/sh.d -MT user/sh.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/rm.c -MF user/rm.d -MT user/rm.d -MT user/rm.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/mkdir.c -MF user/mkdir.d -MT user/mkdir.d -MT user/mkdir.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/ls.c -MF user/ls.d -MT user/ls.d -MT user/ls.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/thread.c -MF user/thread.d -MT user/thread.d -MT user/thread.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/hello.c -MF user/hello.d -MT user/hello.d -MT user/hello.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/stack.c -MF user/stack.d -MT user/stack.d -MT user/stack.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/join4.c -MF user/join4.d -MT user/join4.d -MT user/join4.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/locks.c -MF user/locks.d -MT user/locks.d -MT user/locks.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/join3.c -MF user/join3.d -MT user/join3.d -MT user/join3.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/thread2.c -MF user/thread2.d -MT user/thread2.d -MT user/thread2.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/join.c -MF user/join.d -MT user/join.d -MT user/join.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/badclone.c -MF user/badclone.d -MT user/badclone.d -MT user/badclone.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/clonetest.c -MF user/clonetest.d -MT user/clonetest.d -MT user/clonetest.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/ln.c -MF user/ln.d -MT user/ln.d -MT user/ln.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/kill.c -MF user/kill.d -MT user/kill.d -MT user/kill.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/init.c -MF user/init.d -MT user/init.d -MT user/init.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/grep.c -MF user/grep.d -MT user/grep.d -MT user/grep.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/forktest.c -MF user/forktest.d -MT user/forktest.d -MT user/forktest.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/echo.c -MF user/echo.d -MT user/echo.d -MT user/echo.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG user/cat.c -MF user/cat.d -MT user/cat.d -MT user/cat.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/initcode.S -MF kernel/initcode.d -MT kernel/initcode.d -MT kernel/initcode.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/vm.c -MF kernel/vm.d -MT kernel/vm.d -MT kernel/vm.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/uart.c -MF kernel/uart.d -MT kernel/uart.d -MT kernel/uart.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/trap.c -MF kernel/trap.d -MT kernel/trap.d -MT kernel/trap.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/timer.c -MF kernel/timer.d -MT kernel/timer.d -MT kernel/timer.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/sysproc.c -MF kernel/sysproc.d -MT kernel/sysproc.d -MT kernel/sysproc.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/sysfile.c -MF kernel/sysfile.d -MT kernel/sysfile.d -MT kernel/sysfile.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/syscall.c -MF kernel/syscall.d -MT kernel/syscall.d -MT kernel/syscall.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/spinlock.c -MF kernel/spinlock.d -MT kernel/spinlock.d -MT kernel/spinlock.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG kernel/proc.c -MF kernel/proc.d -MT kernel/proc.d -MT kernel/proc.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/pipe.c -MF kernel/pipe.d -MT kernel/pipe.d -MT kernel/pipe.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/mp.c -MF kernel/mp.d -MT kernel/mp.d -MT kernel/mp.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/main.c -MF kernel/main.d -MT kernel/main.d -MT kernel/main.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/lapic.c -MF kernel/lapic.d -MT kernel/lapic.d -MT kernel/lapic.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/kbd.c -MF kernel/kbd.d -MT kernel/kbd.d -MT kernel/kbd.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/kalloc.c -MF kernel/kalloc.d -MT kernel/kalloc.d -MT kernel/kalloc.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/ioapic.c -MF kernel/ioapic.d -MT kernel/ioapic.d -MT kernel/ioapic.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/ide.c -MF kernel/ide.d -MT kernel/ide.d -MT kernel/ide.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/fs.c -MF kernel/fs.d -MT kernel/fs.d -MT kernel/fs.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/file.c -MF kernel/file.d -MT kernel/file.d -MT kernel/file.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/exec.c -MF kernel/exec.d -MT kernel/exec.d -MT kernel/exec.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/console.c -MF kernel/console.d -MT kernel/console.d -MT kernel/console.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/bio.c -MF kernel/bio.d -MT kernel/bio.d -MT kernel/bio.o
-rm -rf kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o kernel/bootmain.o kernel/bootasm.o kernel/multiboot.o kernel/data.o kernel/bootother.o kernel/initcode.o kernel/bio.d kernel/console.d kernel/exec.d kernel/file.d kernel/fs.d kernel/ide.d kernel/ioapic.d kernel/kalloc.d kernel/kbd.d kernel/lapic.d kernel/main.d kernel/mp.d kernel/picirq.d kernel/pipe.d kernel/proc.d kernel/spinlock.d kernel/string.d kernel/swtch.d kernel/syscall.d kernel/sysfile.d kernel/sysproc.d kernel/timer.d kernel/trapasm.d kernel/trap.d kernel/uart.d kernel/vectors.d kernel/vm.d kernel/bootmain.d kernel/bootasm.d kernel/multiboot.d kernel/data.d kernel/bootother.d kernel/initcode.d kernel/vectors.S kernel/bootblock kernel/bootblock.out kernel/bootother.out kernel/initcode.out kernel/kernel bootother initcode xv6.img user/bin user/cat user/echo user/forktest user/grep user/init user/kill user/ln user/clonetest user/badclone user/join user/thread2 user/join3 user/locks user/join4 user/stack user/hello user/thread user/ls user/mkdir user/rm user/sh user/stressfs user/tester user/usertests user/wc user/zombie user/cat.o user/echo.o user/forktest.o user/grep.o user/init.o user/kill.o user/ln.o user/clonetest.o user/badclone.o user/join.o user/thread2.o user/join3.o user/locks.o user/join4.o user/stack.o user/hello.o user/thread.o user/ls.o user/mkdir.o user/rm.o user/sh.o user/stressfs.o user/tester.o user/usertests.o user/wc.o user/zombie.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/cat.d user/echo.d user/forktest.d user/grep.d user/init.d user/kill.d user/ln.d user/clonetest.d user/badclone.d user/join.d user/thread2.d user/join3.d user/locks.d user/join4.d user/stack.d user/hello.d user/thread.d user/ls.d user/mkdir.d user/rm.d user/sh.d user/stressfs.d user/tester.d user/usertests.d user/wc.d user/zombie.d user/ulib.d user/usys.d user/printf.d user/umalloc.d tools/mkfs tools/mkfs.o tools/mkfs.d fs fs.img .gdbinit .bochsrc dist
+rm -rf kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o kernel/bootmain.o kernel/bootasm.o kernel/multiboot.o kernel/data.o kernel/bootother.o kernel/initcode.o kernel/bio.d kernel/console.d kernel/exec.d kernel/file.d kernel/fs.d kernel/ide.d kernel/ioapic.d kernel/kalloc.d kernel/kbd.d kernel/lapic.d kernel/main.d kernel/mp.d kernel/picirq.d kernel/pipe.d kernel/proc.d kernel/spinlock.d kernel/string.d kernel/swtch.d kernel/syscall.d kernel/sysfile.d kernel/sysproc.d kernel/timer.d kernel/trapasm.d kernel/trap.d kernel/uart.d kernel/vectors.d kernel/vm.d kernel/bootmain.d kernel/bootasm.d kernel/multiboot.d kernel/data.d kernel/bootother.d kernel/initcode.d kernel/vectors.S kernel/bootblock kernel/bootblock.out kernel/bootother.out kernel/initcode.out kernel/kernel bootother initcode xv6.img user/bin user/cat user/echo user/forktest user/grep user/init user/kill user/ln user/clonetest user/badclone user/join user/cond3 user/size user/cond user/thread2 user/join3 user/locks user/join4 user/stack user/hello user/thread user/ls user/mkdir user/rm user/sh user/stressfs user/tester user/usertests user/wc user/zombie user/cat.o user/echo.o user/forktest.o user/grep.o user/init.o user/kill.o user/ln.o user/clonetest.o user/badclone.o user/join.o user/cond3.o user/size.o user/cond.o user/thread2.o user/join3.o user/locks.o user/join4.o user/stack.o user/hello.o user/thread.o user/ls.o user/mkdir.o user/rm.o user/sh.o user/stressfs.o user/tester.o user/usertests.o user/wc.o user/zombie.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/cat.d user/echo.d user/forktest.d user/grep.d user/init.d user/kill.d user/ln.d user/clonetest.d user/badclone.d user/join.d user/cond3.d user/size.d user/cond.d user/thread2.d user/join3.d user/locks.d user/join4.d user/stack.d user/hello.d user/thread.d user/ls.d user/mkdir.d user/rm.d user/sh.d user/stressfs.d user/tester.d user/usertests.d user/wc.d user/zombie.d user/ulib.d user/usys.d user/printf.d user/umalloc.d tools/mkfs tools/mkfs.o tools/mkfs.d fs fs.img .gdbinit .bochsrc dist
 Trying to build project using make
 make
 Makefile:149: kernel/bio.d: No such file or directory
@@ -159,6 +55,9 @@ Makefile:149: user/ln.d: No such file or directory
 Makefile:149: user/clonetest.d: No such file or directory
 Makefile:149: user/badclone.d: No such file or directory
 Makefile:149: user/join.d: No such file or directory
+Makefile:149: user/cond3.d: No such file or directory
+Makefile:149: user/size.d: No such file or directory
+Makefile:149: user/cond.d: No such file or directory
 Makefile:149: user/thread2.d: No such file or directory
 Makefile:149: user/join3.d: No such file or directory
 Makefile:149: user/locks.d: No such file or directory
@@ -222,6 +121,12 @@ gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-
 		-M -MG user/join3.c -MF user/join3.d -MT user/join3.d -MT user/join3.o
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/thread2.c -MF user/thread2.d -MT user/thread2.d -MT user/thread2.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/cond.c -MF user/cond.d -MT user/cond.d -MT user/cond.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/size.c -MF user/size.d -MT user/size.d -MT user/size.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/cond3.c -MF user/cond3.d -MT user/cond3.d -MT user/cond3.o
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/join.c -MF user/join.d -MT user/join.d -MT user/join.o
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
@@ -319,16 +224,195 @@ objcopy -S -O binary -j .text kernel/bootblock.out kernel/bootblock
 ./kernel/sign.pl kernel/bootblock
 boot block is 447 bytes (max 510)
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/console.o kernel/console.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/exec.o kernel/exec.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/file.o kernel/file.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/fs.o kernel/fs.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/ide.o kernel/ide.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/ioapic.o kernel/ioapic.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/kalloc.o kernel/kalloc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/kbd.o kernel/kbd.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/lapic.o kernel/lapic.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/main.o kernel/main.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/mp.o kernel/mp.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/picirq.o kernel/picirq.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/pipe.o kernel/pipe.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/proc.o kernel/proc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/spinlock.o kernel/spinlock.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/string.o kernel/string.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/swtch.S -o kernel/swtch.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/syscall.o kernel/syscall.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/sysfile.o kernel/sysfile.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/sysproc.o kernel/sysproc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/timer.o kernel/timer.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/trapasm.S -o kernel/trapasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/trap.o kernel/trap.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/uart.o kernel/uart.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/vectors.S -o kernel/vectors.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/vm.o kernel/vm.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/multiboot.S -o kernel/multiboot.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/data.S -o kernel/data.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/bootother.S -o kernel/bootother.o
+ld  -m    elf_i386 -nostdlib --omagic \
+		--entry=start --section-start=.text=0x7000 \
+		--output=kernel/bootother.out kernel/bootother.o
+objcopy -S -O binary kernel/bootother.out bootother
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/initcode.S -o kernel/initcode.o
+ld  -m    elf_i386 -nostdlib --omagic \
+		--entry=start --section-start=.text=0x0 \
+		--output=kernel/initcode.out kernel/initcode.o
+objcopy -S -O binary kernel/initcode.out initcode
+ld  -m    elf_i386 -nostdlib --omagic \
+		--section-start=.text=0x100000 --entry=main --output=kernel/kernel \
+		kernel/multiboot.o kernel/data.o kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o \
+		-b binary initcode bootother
+dd if=/dev/zero of=xv6.img count=10000
+10000+0 records in
+10000+0 records out
+5120000 bytes (5.1 MB) copied, 0.0215385 s, 238 MB/s
+dd if=kernel/bootblock of=xv6.img conv=notrunc
+1+0 records in
+1+0 records out
+512 bytes (512 B) copied, 1.7801e-05 s, 28.8 MB/s
+dd if=kernel/kernel of=xv6.img seek=1 conv=notrunc
+257+1 records in
+257+1 records out
+131682 bytes (132 kB) copied, 0.000389992 s, 338 MB/s
+gcc -c  -iquote include -Wall -Werror -ggdb  -o tools/mkfs.o tools/mkfs.c
+gcc  tools/mkfs.o -o tools/mkfs
+mkdir -p fs
+cp README fs/README
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/cat.o user/cat.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ulib.o user/ulib.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c user/usys.S -o user/usys.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/printf.o user/printf.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/umalloc.o user/umalloc.c
+mkdir -p user/bin
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/cat user/cat.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/cat fs/cat
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/echo.o user/echo.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/echo user/echo.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/echo fs/echo
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/forktest.o user/forktest.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/forktest user/forktest.o user/ulib.o user/usys.o
+cp user/bin/forktest fs/forktest
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/grep.o user/grep.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/grep user/grep.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/grep fs/grep
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/init.o user/init.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/init user/init.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/init fs/init
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/kill.o user/kill.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/kill user/kill.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/kill fs/kill
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ln.o user/ln.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/ln user/ln.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/ln fs/ln
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/clonetest.o user/clonetest.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/clonetest user/clonetest.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/clonetest fs/clonetest
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/badclone.o user/badclone.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/badclone user/badclone.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/badclone fs/badclone
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/join.o user/join.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/join user/join.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/join fs/join
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/cond3.o user/cond3.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/cond3 user/cond3.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/cond3 fs/cond3
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/size.o user/size.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/size user/size.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/size fs/size
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/cond.o user/cond.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/cond user/cond.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/cond fs/cond
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/thread2.o user/thread2.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/thread2 user/thread2.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/thread2 fs/thread2
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/join3.o user/join3.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/join3 user/join3.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/join3 fs/join3
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/locks.o user/locks.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/locks user/locks.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/locks fs/locks
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/join4.o user/join4.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/join4 user/join4.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/join4 fs/join4
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/stack.o user/stack.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/stack user/stack.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/stack fs/stack
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/hello.o user/hello.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/hello user/hello.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/hello fs/hello
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/thread.o user/thread.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/thread user/thread.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/thread fs/thread
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ls.o user/ls.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/ls user/ls.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/ls fs/ls
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/mkdir.o user/mkdir.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/mkdir user/mkdir.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/mkdir fs/mkdir
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/rm.o user/rm.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/rm user/rm.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/rm fs/rm
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/sh.o user/sh.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/sh user/sh.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/sh fs/sh
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/stressfs.o user/stressfs.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/stressfs user/stressfs.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/stressfs fs/stressfs
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/usertests.o user/usertests.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/usertests user/usertests.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/usertests fs/usertests
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/wc.o user/wc.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/wc user/wc.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/wc fs/wc
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/zombie.o user/zombie.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/zombie user/zombie.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/zombie fs/zombie
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 818 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/cond3 user/bin/grep user/bin/tester user/bin/join user/bin/stack user/bin/hello user/bin/locks user/bin/kill user/bin/cond user/bin/cat user/bin/mkdir user/bin/badclone user/bin/init user/bin/join4 user/bin/rm user/bin/join3 user/bin/echo user/bin/ls user/bin/thread user/bin/ln user/bin/usertests user/bin/sh user/bin/wc user/bin/thread2 user/bin/clonetest user/bin/stressfs user/bin/size user/bin/zombie
 
 
-test build FAILED
+test build PASSED
  (build xv6 using make)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -342,17 +426,60 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 820 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
 
-
-test clone FAILED
+test clone PASSED
  (clone and verify that address space is shared)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -366,17 +493,61 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 821 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
 
 
-test clone2 FAILED
+test clone2 PASSED
  (clone and play with the argument)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -390,17 +561,61 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 822 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
 
 
-test clone3 FAILED
+test clone3 PASSED
  (clone copies file descriptors, but doesn't share)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -414,17 +629,62 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 821 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+proc->sz: 43008
+TEST PASSED
 
 
-test badclone FAILED
+test badclone PASSED
  (clone with bad stack argument)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -438,17 +698,61 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 821 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
+$ 
 
-
-test stack FAILED
+test stack PASSED
  (set up stack correctly (and without extra items))
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -462,17 +766,63 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 822 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+8000
+8000
+TEST PASSED
 
 
-test join FAILED
+test join PASSED
  (clone and join syscalls)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -486,17 +836,61 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 822 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
 
 
-test join2 FAILED
+test join2 PASSED
  (join argument checking)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -510,17 +904,60 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 820 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
 
 
-test join3 FAILED
+test join3 PASSED
  (join should not handle child processes (forked))
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -534,17 +971,61 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 822 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
 
 
-test join4 FAILED
+test join4 PASSED
  (join, not wait, should handle threads)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -558,17 +1039,61 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 821 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
 
 
-test thread FAILED
+test thread PASSED
  (thread user library functions)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -582,17 +1107,2060 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 821 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+TEST PASSED
 
 
-test thread2 FAILED
+test thread2 PASSED
  (memory leaks from thread library?)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -606,17 +3174,90 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 823 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 139264
+proc->sz: 139264
+proc->sz: 139264
+proc->sz: 172032
+proc->sz: 172032
+proc->sz: 172032
+proc->sz: 204800
+proc->sz: 204800
+proc->sz: 204800
+proc->sz: 237568
+proc->sz: 237568
+proc->sz: 237568
+proc->sz: 270336
+proc->sz: 270336
+proc->sz: 270336
+proc->sz: 303104
+proc->sz: 303104
+proc->sz: 303104
+proc->sz: 335872
+proc->sz: 335872
+proc->sz: 335872
+TEST PASSED
 
 
-test multi FAILED
+test multi PASSED
  (multiple threads with some depth of function calls)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -630,17 +3271,90 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 821 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 139264
+proc->sz: 139264
+proc->sz: 139264
+proc->sz: 172032
+proc->sz: 172032
+proc->sz: 172032
+proc->sz: 204800
+proc->sz: 204800
+proc->sz: 204800
+proc->sz: 237568
+proc->sz: 237568
+proc->sz: 237568
+proc->sz: 270336
+proc->sz: 270336
+proc->sz: 270336
+proc->sz: 303104
+proc->sz: 303104
+proc->sz: 303104
+proc->sz: 335872
+proc->sz: 335872
+proc->sz: 335872
+TEST PASSED
 
 
-test locks FAILED
+test locks PASSED
  (test lock correctness)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -654,17 +3368,61 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 821 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
 
 
-test cond FAILED
+test cond PASSED
  (test cv_wait and cv_signal, cannot leave cv_wait without lock)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -678,17 +3436,61 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 822 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+TEST PASSED
 
 
-test cond2 FAILED
+test cond2 PASSED
  (test cv_wait and cv_signal, don't wakeup on wrong cv)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -702,17 +3504,92 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 822 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 139264
+proc->sz: 139264
+proc->sz: 139264
+proc->sz: 172032
+proc->sz: 172032
+proc->sz: 172032
+proc->sz: 204800
+proc->sz: 204800
+proc->sz: 204800
+proc->sz: 237568
+proc->sz: 237568
+proc->sz: 237568
+proc->sz: 270336
+proc->sz: 270336
+proc->sz: 270336
+proc->sz: 303104
+proc->sz: 303104
+proc->sz: 303104
+proc->sz: 335872
+proc->sz: 335872
+proc->sz: 335872
+user/tester.c: 52 assert failed (global == i+1)
+TEST FAILED
 
 
 test cond3 FAILED
  (test cv_wait and cv_signal, signal, don't broadcast)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
+ tester failed
 
 
 **********************************************************************
@@ -726,17 +3603,63 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 822 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+proc->sz: 40960
+FFFFFFFF
+TEST PASSED
 
 
-test race FAILED
+test race PASSED
  (race condition in CV? (must atomically release lock and sleep))
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -750,17 +3673,62 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 821 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+pid 3 tester: trap 14 err 5 on cpu 1 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
 
 
-test noexit FAILED
+test noexit PASSED
  (no exit call in thread, should trap at bogus address)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 
 **********************************************************************
@@ -774,139 +3742,156 @@ Trying to build project using make
 make
 gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
 		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
-In file included from kernel/bio.c:25:
-kernel/defs.h:101: error: expected declaration specifiers or ‘...’ before ‘lock_t’
-make: *** [kernel/bio.o] Error 1
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+grep
+cond
+join
+echo
+usertests
+zombie
+wc
+clonetest
+forktest
+init
+stressfs
+stack
+kill
+badclone
+thread2
+README
+rm
+hello
+mkdir
+thread
+ln
+join4
+tester
+cond3
+cat
+join3
+locks
+size
+ls
+sh
+balloc: first 822 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 2
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 40960
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 73728
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 106496
+proc->sz: 139264
+proc->sz: 139264
+proc->sz: 139264
+proc->sz: 172032
+proc->sz: 172032
+proc->sz: 172032
+proc->sz: 204800
+proc->sz: 204800
+proc->sz: 204800
+proc->sz: 237568
+proc->sz: 237568
+proc->sz: 237568
+proc->sz: 270336
+proc->sz: 270336
+proc->sz: 270336
+proc->sz: 303104
+proc->sz: 303104
+proc->sz: 303104
+proc->sz: 335872
+proc->sz: 335872
+proc->sz: 335872
+user/tester.c: 79 assert failed ((unsigned int)sbrk(0) == size)
+TEST FAILED
 
 
 test size FAILED
  (check that address space size is updated in threads)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
+ tester failed
 
 **********************************************************************
 Summary:
-test build FAILED
+test build PASSED
  (build xv6 using make)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test clone FAILED
+test clone PASSED
  (clone and verify that address space is shared)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test clone2 FAILED
+test clone2 PASSED
  (clone and play with the argument)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test clone3 FAILED
+test clone3 PASSED
  (clone copies file descriptors, but doesn't share)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test badclone FAILED
+test badclone PASSED
  (clone with bad stack argument)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test stack FAILED
+test stack PASSED
  (set up stack correctly (and without extra items))
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test join FAILED
+test join PASSED
  (clone and join syscalls)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test join2 FAILED
+test join2 PASSED
  (join argument checking)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test join3 FAILED
+test join3 PASSED
  (join should not handle child processes (forked))
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test join4 FAILED
+test join4 PASSED
  (join, not wait, should handle threads)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test thread FAILED
+test thread PASSED
  (thread user library functions)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test thread2 FAILED
+test thread2 PASSED
  (memory leaks from thread library?)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test multi FAILED
+test multi PASSED
  (multiple threads with some depth of function calls)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test locks FAILED
+test locks PASSED
  (test lock correctness)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test cond FAILED
+test cond PASSED
  (test cv_wait and cv_signal, cannot leave cv_wait without lock)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test cond2 FAILED
+test cond2 PASSED
  (test cv_wait and cv_signal, don't wakeup on wrong cv)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 test cond3 FAILED
  (test cv_wait and cv_signal, signal, don't broadcast)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
+ tester failed
 
-test race FAILED
+test race PASSED
  (race condition in CV? (must atomically release lock and sleep))
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
-test noexit FAILED
+test noexit PASSED
  (no exit call in thread, should trap at bogus address)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
 
 test size FAILED
  (check that address space size is updated in threads)
- make failed (error 2)
- required file 'xv6.img' does not exist after make
- required file 'fs.img' does not exist after make
+ tester failed
 
-Passed 0 of 20 tests.
-Overall 0 of 20
+Passed 18 of 20 tests.
+Overall 18 of 20

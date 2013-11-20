@@ -280,6 +280,7 @@ int join (void **stack)
 				p->name[0] = 0;
 				p->killed = 0;
 				p->clonecalled = 0;
+				//proc->sz -= PGSIZE;
 				//pointer put in
 				release(&ptable.lock);
 				return pid;
@@ -508,36 +509,18 @@ sleep(void *chan, struct spinlock *lk)
 void
 csleep(void *chan, lock_t *lk)
 {
-	if(proc == 0)
-		panic("sleep");
 
-	if(lk == 0)
-		panic("sleep without lk");
-
-	// Must acquire ptable.lock in order to
-	// change p->state and then call sched.
-	// Once we hold ptable.lock, we can be
-	// guaranteed that we won't miss any wakeup
-	// (wakeup runs with ptable.lock locked),
-	// so it's okay to release lk.
-	//if(lk != &(lock_t)ptable.lock){  //DOC: sleeplock0
-		acquire(&ptable.lock);  //DOC: sleeplock1
-		crelease(lk);
-	//}
-
+	acquire(&ptable.lock);  //DOC: sleeplock1
 	// Go to sleep.
+	xchg(&lk->locked, 0);//releasing the lock
 	proc->chan = chan;
 	proc->state = SLEEPING;
 	sched();
 
-	// Tidy up.
-	proc->chan = 0;
+	release(&ptable.lock);
 
-	// Reacquire original lock.
-	//if(lk != &(lock_t)ptable.lock){  //DOC: sleeplock2
-		release(&ptable.lock);
-		cacquire(lk);
-	//}
+	while(xchg(&lk->locked, 1) != 0)//reacquiring the lock
+			;
 }
 // Wake up all processes sleeping on chan.
 // The ptable lock must be held.
@@ -549,7 +532,19 @@ wakeup1(void *chan)
 	for(p = ptable.proc; p < &ptable.proc[NPROC]; p++)
 		if(p->state == SLEEPING && p->chan == chan)
 			p->state = RUNNABLE;
+
 }
+//void
+//cwakeup1(void *chan)
+//{
+//	struct proc *p;
+//
+//	for(p = ptable.proc; p < &ptable.proc[NPROC]; p++)
+//		if(p->state == SLEEPING && p->chan == chan){
+//			p->state = RUNNABLE;
+//			break;//just wake one
+//		}
+//}
 
 // Wake up all processes sleeping on chan.
 void
