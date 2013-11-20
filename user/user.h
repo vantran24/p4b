@@ -1,16 +1,6 @@
 #ifndef _USER_H_
 #define _USER_H_
 
-
-// Mutual exclusion lock.
-struct __lock_t {
-	uint  locked;       	// Is the lock held?
-}lock_t;
-
-struct __cond_t {
-	uint  true;		 		//condition true or not
-}cond_t;
-
 struct stat;
 
 // system calls
