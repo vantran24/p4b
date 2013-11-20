@@ -54,7 +54,7 @@ int thread_join();
 void lock_init(lock_t *lk);
 void lock_acquire(lock_t *lk);
 void lock_release(lock_t *lk);
-//void cv_wait(cond_t *cv,lock_t *lk);
+//void cv_wait(cond_t *cv, lock_t *lk);
 //void cv_signal(cond_t *cv);
 
 #endif // _USER_H_
