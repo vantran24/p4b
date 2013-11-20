@@ -221,7 +221,7 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
 	//stack -= sizeof thread->tf->eip;		//instr pointer
 
 
-	//usptr -= 2*sizeof (uint);
+	usptr -= 2*sizeof (uint);
 	copyout(thread->pgdir, usptr, userstk, 2*sizeof (uint));
 	//stack = (void *) thread->tf->eip;
 	thread->tf->eip = (uint)fcn;
