@@ -3,7 +3,7 @@
 
 
 // Mutual exclusion lock.
-struct lock_t {
+typedef struct __lock_t {
 	uint  locked;       // Is the lock held?
 
   // For debugging:
@@ -11,11 +11,11 @@ struct lock_t {
   struct cpu *cpu;   // The cpu holding the lock.
   unsigned int  pcs[10];      // The call stack (an array of program counters)
                      // that locked the lock.
-};
+}lock_t;
 
-struct cond_t {
+typedef struct __cond_t {
 	uint  true;		 //condition true or not
-};
+}cond_t;
 
 struct stat;
 
