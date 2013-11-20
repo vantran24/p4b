@@ -276,15 +276,15 @@ int join (void **stack)
 				p->parent = 0;
 				p->name[0] = 0;
 				p->killed = 0;
-				p->clonecalled = 0;
+				//p->clonecalled = 0;
 				//pointer put in
 				release(&ptable.lock);
 				return pid;
 			}
 		}
-
+//p->clonecalled != 1
 		// No point waiting if we don't have any children.
-		if(!havekids || proc->killed || p->clonecalled != 1){
+		if(!havekids || proc->killed || ){
 			release(&ptable.lock);
 			return -1;
 		}
