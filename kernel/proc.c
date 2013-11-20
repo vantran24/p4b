@@ -267,12 +267,13 @@ int join (void **stack)
 				pid = p->pid;
 				kfree(p->kstack);
 				p->kstack = 0;
-				freevm(p->pgdir);//frees addr space
+				//freevm(p->pgdir);//frees addr space
 				p->state = UNUSED;
 				p->pid = 0;
 				p->parent = 0;
 				p->name[0] = 0;
 				p->killed = 0;
+				//pointer put in
 				release(&ptable.lock);
 				return pid;
 			}
@@ -287,7 +288,7 @@ int join (void **stack)
 		// Wait for children to exit.  (See wakeup1 call in proc_exit.)
 		sleep(proc, &ptable.lock);  //DOC: wait-sleep
 	}
-	//return wait();//change the existing wait()
+	return 0;//change the existing wait()
 }
 
 

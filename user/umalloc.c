@@ -44,9 +44,10 @@ int thread_create(void (*start_routine)(void*), void *arg)
 void thread_join()
 {
 	//how to get the user stack?
-	//void** stack = malloc(sizeof(void));
+	void** stack = malloc(sizeof(void));
 	//Call join(): frees the user stack and returns
-	join(NULL);
+	join(stack);
+	free(stack);
 }
 
 //spinlock
