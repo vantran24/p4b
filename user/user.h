@@ -1,6 +1,7 @@
 #ifndef _USER_H_
 #define _USER_H_
 
+struct lock_t;
 struct stat;
 
 // system calls
