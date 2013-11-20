@@ -10,6 +10,12 @@ USER_PROGS := \
 	ln\
 	clonetest\
 	badclone\
+	join\
+	thread2\
+	join3\
+	locks\
+	join4\
+	stack\
 	hello\
 	thread\
 	ls\

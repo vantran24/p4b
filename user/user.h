@@ -18,9 +18,11 @@ int fork(void);
 //added
 int clone (void(*fcn)(void*), void *arg, void*stack);
 int join (void **stack);
-//added
+//more added
 int test(int, int);
-
+void csleep(void *chan, lock_t *lk);
+static void wakeup1(void *chan);
+//
 int exit(void) __attribute__((noreturn));
 int wait(void);
 int pipe(int*);
@@ -62,8 +64,8 @@ int thread_join();
 void lock_init(lock_t *lk);
 void lock_acquire(lock_t *lk);
 void lock_release(lock_t *lk);
-//void cv_wait(cond_t *cv, lock_t *lk);
-//void cv_signal(cond_t *cv);
+void cv_wait(cond_t *cv, lock_t *lk);
+void cv_signal(cond_t *cv);
 
 #endif // _USER_H_
 

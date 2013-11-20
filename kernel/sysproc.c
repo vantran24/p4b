@@ -6,6 +6,31 @@
 #include "proc.h"
 #include "sysfunc.h"
 
+int sys_csleep(void)
+{
+	void *chan;
+	lock_t *lk;
+	if (argptr(0, (void*)&chan, sizeof(chan)) < 0)
+	{
+		return -1;
+	}
+	if (argptr(1, (void*)&lk, sizeof(lk)) < 0)
+	{
+		return -1;
+	}
+	csleep(chan, lk);
+	return 0;
+}
+int sys_wakeup1(void)
+{
+	void *chan;
+	if (argptr(0, (void*)&chan, sizeof(chan)) < 0)
+		{
+			return -1;
+		}
+	wakeup1(chan);
+	return 0;
+}
 int sys_test (void)
 {
 	int n;

@@ -9,7 +9,9 @@ struct pipe;
 struct proc;
 struct spinlock;
 struct stat;
-
+typedef struct __lock_t{
+	volatile uint  locked;       	// Is the lock held?
+}lock_t;
 // bio.c
 void            binit(void);
 struct buf*     bread(uint, uint);
@@ -94,11 +96,13 @@ void            pipeclose(struct pipe*, int);
 int             piperead(struct pipe*, char*, int);
 int             pipewrite(struct pipe*, char*, int);
 
-// thread.c
+// proc.c
 int 			clone(void(*fcn)(void*), void *arg, void*stack);
 int 			join (void **stack);
 int				test (int n, int m);
-// proc.c
+void			csleep(void *chan, lock_t *lk);
+void 			wakeup1(void *chan);
+//
 struct proc*    copyproc(struct proc*);
 void            exit(void);
 int             fork(void);
@@ -117,6 +121,8 @@ void            yield(void);
 // swtch.S
 void            swtch(struct context**, struct context*);
 
+void 			cacquire(lock_t *lk);
+void 			crelease(lock_t *lk);
 // spinlock.c
 void            acquire(struct spinlock*);
 void            getcallerpcs(void*, uint*);

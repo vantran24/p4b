@@ -17,7 +17,7 @@ int nextpid = 1;
 extern void forkret(void);
 extern void trapret(void);
 
-static void wakeup1(void *chan);
+//static void wakeup1(void *chan);
 
 void
 pinit(void)
@@ -505,9 +505,43 @@ sleep(void *chan, struct spinlock *lk)
 	}
 }
 
+void
+csleep(void *chan, lock_t *lk)
+{
+	if(proc == 0)
+		panic("sleep");
+
+	if(lk == 0)
+		panic("sleep without lk");
+
+	// Must acquire ptable.lock in order to
+	// change p->state and then call sched.
+	// Once we hold ptable.lock, we can be
+	// guaranteed that we won't miss any wakeup
+	// (wakeup runs with ptable.lock locked),
+	// so it's okay to release lk.
+	//if(lk != &(lock_t)ptable.lock){  //DOC: sleeplock0
+		acquire(&ptable.lock);  //DOC: sleeplock1
+		crelease(lk);
+	//}
+
+	// Go to sleep.
+	proc->chan = chan;
+	proc->state = SLEEPING;
+	sched();
+
+	// Tidy up.
+	proc->chan = 0;
+
+	// Reacquire original lock.
+	//if(lk != &(lock_t)ptable.lock){  //DOC: sleeplock2
+		release(&ptable.lock);
+		cacquire(lk);
+	//}
+}
 // Wake up all processes sleeping on chan.
 // The ptable lock must be held.
-static void
+void
 wakeup1(void *chan)
 {
 	struct proc *p;
