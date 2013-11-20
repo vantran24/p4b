@@ -6,14 +6,14 @@
 #include "x86.h"
 
 
-// Mutual exclusion lock.
-struct lock_t {
-	volatile uint  locked;       	// Is the lock held?
-}lock_t;
-
-struct cond_t {
-	volatile uint  true;		 		//condition true or not
-}cond_t;
+//// Mutual exclusion lock.
+//struct lock_t {
+//	volatile uint  locked;       	// Is the lock held?
+//}lock_t;
+//
+//struct cond_t {
+//	uint  true;		 		//condition true or not
+//}cond_t;
 
 //spinlock
 
