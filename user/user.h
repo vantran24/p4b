@@ -1,6 +1,14 @@
 #ifndef _USER_H_
 #define _USER_H_
 
+//// Mutual exclusion lock.
+typedef struct __lock_t{
+	volatile uint  locked;       	// Is the lock held?
+}lock_t;
+
+typedef struct __cond_t {
+	uint  true;		 		//condition true or not
+}cont_t;
 
 struct stat;
 
