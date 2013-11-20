@@ -35,7 +35,6 @@ int thread_create(void (*start_routine)(void*), void *arg)
 			stack = stack + (4096 - (uint)stack % PGSIZE);
 		}
 		//stack = malloc(sizeof PGSIZE);
-			//page align needed still
 			int child = clone(start_routine, arg, stack);
 			return child;
 	}
@@ -53,7 +52,7 @@ int thread_join()
 
 //spinlock
 
-void init_lock(struct lock_t *lk)
+void lock_init(struct lock_t *lk)
 {
 	lk->locked = 0; 	//is it locked?
 	//lk->cpu = 0;		//cpu holding lock
