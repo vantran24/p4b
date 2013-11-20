@@ -1,7 +1,7 @@
 #ifndef _USER_H_
 #define _USER_H_
 
-struct lock_t;
+
 struct stat;
 
 // system calls
@@ -51,11 +51,11 @@ int atoi(const char*);
 
 int thread_create(void (*start_routine)(void*), void *arg);
 int thread_join();
-void lock_init(struct lock_t *lk);
-void lock_acquire(struct lock_t *lk);
-void lock_release(struct lock_t *lk);
-//void cv_wait(struct cond_t *cv, struct lock_t *lk);
-//void cv_signal(struct cond_t *cv);
+void lock_init(lock_t *lk);
+void lock_acquire(lock_t *lk);
+void lock_release(lock_t *lk);
+//void cv_wait(cond_t *cv,lock_t *lk);
+//void cv_signal(cond_t *cv);
 
 #endif // _USER_H_
 
