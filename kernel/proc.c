@@ -194,6 +194,7 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
 	//thread->state = UNUSED;
 
 	//these should be left the same
+	thread->thrstk = stack;
 	thread->sz = proc->sz;
 	thread->parent = proc;
 	*thread->tf = *proc->tf;		// making full copy of the trap frame
@@ -268,6 +269,7 @@ int join (void **stack)
 				kfree(p->kstack);
 				p->kstack = 0;
 				//freevm(p->pgdir);//frees addr space
+				stack = p->thrstk;
 				p->state = UNUSED;
 				p->pid = 0;
 				p->parent = 0;
