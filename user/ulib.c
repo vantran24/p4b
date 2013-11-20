@@ -8,7 +8,7 @@
 
 // Mutual exclusion lock.
 struct lock_t {
-	volatile uint  *locked;       	// Is the lock held?
+	volatile uint  locked;       	// Is the lock held?
 }lock_t;
 
 struct cond_t {
