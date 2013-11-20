@@ -8,11 +8,11 @@ typedef unsigned short ushort;
 typedef unsigned char  uchar;
 typedef uint pde_t;
 // Mutual exclusion lock.
-typedef struct __lock_t {
+struct __lock_t {
 	volatile uint locked;       	// Is the lock held?
 }lock_t;
 
-typedef struct __cond_t {
+struct __cond_t {
 	uint true;		 		//condition true or not
 }cond_t;
 
