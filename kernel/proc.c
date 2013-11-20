@@ -269,7 +269,7 @@ int join (void **stack)
 				kfree(p->kstack);
 				p->kstack = 0;
 				//freevm(p->pgdir);//frees addr space
-				stack = p->thrstk;
+				*stack = p->thrstk;
 				p->state = UNUSED;
 				p->pid = 0;
 				p->parent = 0;
