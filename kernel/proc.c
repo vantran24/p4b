@@ -171,7 +171,7 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
 	if ((uint)stack % PGSIZE != 0) {
 		return -1;
 	}
-	// check stack is in heap
+	// check stack is in within addr space
 	if ((uint)stack + PGSIZE > proc->sz) {
 		return -1;
 	}
