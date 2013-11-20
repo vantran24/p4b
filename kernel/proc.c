@@ -260,7 +260,7 @@ int join (void **stack)
 		havekids = 0;
 		for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
 			//going through the process table
-			if(p->parent != proc) //if it is not the parent
+			if(p->parent != proc || p->clonecalled != 1) //if it is not the parent
 				continue;
 			havekids = 1;//means proc has kids
 			if(p->state == ZOMBIE){//zombie means that it is done running but
@@ -282,9 +282,9 @@ int join (void **stack)
 				return pid;
 			}
 		}
-//p->clonecalled != 1
+
 		// No point waiting if we don't have any children.
-		if(!havekids || proc->killed ){
+		if(!havekids || proc->killed){
 			release(&ptable.lock);
 			return -1;
 		}
