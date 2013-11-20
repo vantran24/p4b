@@ -5,6 +5,14 @@
 #include "x86.h"
 
 #define PGSIZE (4096)
+// Mutual exclusion lock.
+struct __lock_t {
+	uint  *locked;       	// Is the lock held?
+}lock_t;
+
+struct __cond_t {
+	uint  true;		 		//condition true or not
+}cond_t;
 
 // Memory allocator by Kernighan and Ritchie,
 // The C programming Language, 2nd ed.  Section 8.7.
