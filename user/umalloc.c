@@ -36,12 +36,11 @@ int thread_create(void (*start_routine)(void*), void *arg)
 			int child = clone(start_routine, arg, stack);
 			return child;
 	}
-	return NULL;
+	return 0;
 }
 int thread_join()
 {
-	//how to get the user stack?
-	void** stack = malloc(sizeof(void));
+	void** stack = malloc(sizeof(void));//get the smallest size we can get
 	//Call join(): frees the user stack and returns
 	int jpid = join(stack);
 	free(*stack);//

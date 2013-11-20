@@ -7,8 +7,6 @@ build xv6 using make
 **********************************************************************
 Trying to clean project using make clean
 make clean
-gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
-		-M -MG kernel/proc.c -MF kernel/proc.d -MT kernel/proc.d -MT kernel/proc.o
 rm -rf kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o kernel/bootmain.o kernel/bootasm.o kernel/multiboot.o kernel/data.o kernel/bootother.o kernel/initcode.o kernel/bio.d kernel/console.d kernel/exec.d kernel/file.d kernel/fs.d kernel/ide.d kernel/ioapic.d kernel/kalloc.d kernel/kbd.d kernel/lapic.d kernel/main.d kernel/mp.d kernel/picirq.d kernel/pipe.d kernel/proc.d kernel/spinlock.d kernel/string.d kernel/swtch.d kernel/syscall.d kernel/sysfile.d kernel/sysproc.d kernel/timer.d kernel/trapasm.d kernel/trap.d kernel/uart.d kernel/vectors.d kernel/vm.d kernel/bootmain.d kernel/bootasm.d kernel/multiboot.d kernel/data.d kernel/bootother.d kernel/initcode.d kernel/vectors.S kernel/bootblock kernel/bootblock.out kernel/bootother.out kernel/initcode.out kernel/kernel bootother initcode xv6.img user/bin user/cat user/echo user/forktest user/grep user/init user/kill user/ln user/clonetest user/badclone user/join user/cond3 user/size user/cond user/thread2 user/join3 user/locks user/join4 user/stack user/hello user/thread user/ls user/mkdir user/rm user/sh user/stressfs user/tester user/usertests user/wc user/zombie user/cat.o user/echo.o user/forktest.o user/grep.o user/init.o user/kill.o user/ln.o user/clonetest.o user/badclone.o user/join.o user/cond3.o user/size.o user/cond.o user/thread2.o user/join3.o user/locks.o user/join4.o user/stack.o user/hello.o user/thread.o user/ls.o user/mkdir.o user/rm.o user/sh.o user/stressfs.o user/tester.o user/usertests.o user/wc.o user/zombie.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/cat.d user/echo.d user/forktest.d user/grep.d user/init.d user/kill.d user/ln.d user/clonetest.d user/badclone.d user/join.d user/cond3.d user/size.d user/cond.d user/thread2.d user/join3.d user/locks.d user/join4.d user/stack.d user/hello.d user/thread.d user/ls.d user/mkdir.d user/rm.d user/sh.d user/stressfs.d user/tester.d user/usertests.d user/wc.d user/zombie.d user/ulib.d user/usys.d user/printf.d user/umalloc.d tools/mkfs tools/mkfs.o tools/mkfs.d fs fs.img .gdbinit .bochsrc dist
 Trying to build project using make
 make
@@ -269,15 +267,15 @@ ld  -m    elf_i386 -nostdlib --omagic \
 dd if=/dev/zero of=xv6.img count=10000
 10000+0 records in
 10000+0 records out
-5120000 bytes (5.1 MB) copied, 0.0215385 s, 238 MB/s
+5120000 bytes (5.1 MB) copied, 0.0221705 s, 231 MB/s
 dd if=kernel/bootblock of=xv6.img conv=notrunc
 1+0 records in
 1+0 records out
-512 bytes (512 B) copied, 1.7801e-05 s, 28.8 MB/s
+512 bytes (512 B) copied, 1.8106e-05 s, 28.3 MB/s
 dd if=kernel/kernel of=xv6.img seek=1 conv=notrunc
 257+1 records in
 257+1 records out
-131682 bytes (132 kB) copied, 0.000389992 s, 338 MB/s
+131816 bytes (132 kB) copied, 0.000396823 s, 332 MB/s
 gcc -c  -iquote include -Wall -Werror -ggdb  -o tools/mkfs.o tools/mkfs.c
 gcc  tools/mkfs.o -o tools/mkfs
 mkdir -p fs
@@ -477,6 +475,7 @@ $ tester
 tester
 proc->sz: 40960
 TEST PASSED
+
 
 test clone PASSED
  (clone and verify that address space is shared)
@@ -749,7 +748,7 @@ $ tester
 tester
 proc->sz: 40960
 TEST PASSED
-$ 
+
 
 test stack PASSED
  (set up stack correctly (and without extra items))
@@ -819,7 +818,6 @@ proc->sz: 40960
 8000
 8000
 TEST PASSED
-
 
 test join PASSED
  (clone and join syscalls)
@@ -3583,13 +3581,11 @@ proc->sz: 303104
 proc->sz: 335872
 proc->sz: 335872
 proc->sz: 335872
-user/tester.c: 52 assert failed (global == i+1)
-TEST FAILED
+TEST PASSED
 
 
-test cond3 FAILED
+test cond3 PASSED
  (test cv_wait and cv_signal, signal, don't broadcast)
- tester failed
 
 
 **********************************************************************
@@ -3723,7 +3719,7 @@ init: starting sh
 $ tester
 tester
 proc->sz: 40960
-pid 3 tester: trap 14 err 5 on cpu 1 eip 0xffffffff addr 0xffffffff--kill proc
+pid 3 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
 TEST PASSED
 
 
@@ -3879,9 +3875,8 @@ test cond PASSED
 test cond2 PASSED
  (test cv_wait and cv_signal, don't wakeup on wrong cv)
 
-test cond3 FAILED
+test cond3 PASSED
  (test cv_wait and cv_signal, signal, don't broadcast)
- tester failed
 
 test race PASSED
  (race condition in CV? (must atomically release lock and sleep))
@@ -3893,5 +3888,5 @@ test size FAILED
  (check that address space size is updated in threads)
  tester failed
 
-Passed 18 of 20 tests.
-Overall 18 of 20
+Passed 19 of 20 tests.
+Overall 19 of 20

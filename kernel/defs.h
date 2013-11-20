@@ -102,7 +102,7 @@ int 			clone(void(*fcn)(void*), void *arg, void*stack);
 int 			join (void **stack);
 int				test (int n, int m);
 void			csleep(void *chan, lock_t *lk);
-void 			wakeup1(void *chan);
+void 			cwakeup1(void *chan);
 //
 struct proc*    copyproc(struct proc*);
 void            exit(void);

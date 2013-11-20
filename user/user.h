@@ -21,7 +21,7 @@ int join (void **stack);
 //more added
 int test(int, int);
 void csleep(void *chan, lock_t *lk);
-void wakeup1(void *chan);
+void cwakeup1(void *chan);
 //
 int exit(void) __attribute__((noreturn));
 int wait(void);

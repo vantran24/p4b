@@ -21,14 +21,14 @@ int sys_csleep(void)
 	csleep(chan, lk);
 	return 0;
 }
-int sys_wakeup1(void)
+int sys_cwakeup1(void)
 {
 	void *chan;
 	if (argptr(0, (void*)&chan, sizeof(chan)) < 0)
 		{
 			return -1;
 		}
-	wakeup1(chan);
+	cwakeup1(chan);
 	return 0;
 }
 int sys_test (void)

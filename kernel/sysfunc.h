@@ -28,6 +28,6 @@ int sys_clone(void);
 int sys_join(void);
 int sys_test(void);
 int sys_csleep(void);
-int sys_wakeup1(void);
+int sys_cwakeup1(void);
 
 #endif // _SYSFUNC_H_

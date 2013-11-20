@@ -17,7 +17,7 @@ int nextpid = 1;
 extern void forkret(void);
 extern void trapret(void);
 
-//static void wakeup1(void *chan);
+static void wakeup1(void *chan);
 
 void
 pinit(void)
@@ -191,9 +191,9 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
 
 	//sets addr space same as the parent
 	thread->pgdir = proc->pgdir;
+	//don't do this since it shares the kstack
 	//kfree(thread->kstack);
 	//thread->kstack = 0; 		//bottom of the kernel stack
-	//thread->state = UNUSED;
 
 	//these should be left the same
 	thread->thrstk = stack;
@@ -202,9 +202,6 @@ int clone(void(*fcn)(void*), void *arg, void *stack)
 	thread->sz = proc->sz;
 	thread->parent = proc;
 	*thread->tf = *proc->tf;		// making full copy of the trap frame
-	//thread->tf->eax = 0;			// eax is in the trap frame so it can return
-	// something diff
-	// Clear %eax so that fork returns 0 in the child.
 
 	// setup new user stack
 	// and registers (np->tf->eip) instruction pt
@@ -524,7 +521,7 @@ csleep(void *chan, lock_t *lk)
 }
 // Wake up all processes sleeping on chan.
 // The ptable lock must be held.
-void
+static void
 wakeup1(void *chan)
 {
 	struct proc *p;
@@ -534,17 +531,17 @@ wakeup1(void *chan)
 			p->state = RUNNABLE;
 
 }
-//void
-//cwakeup1(void *chan)
-//{
-//	struct proc *p;
-//
-//	for(p = ptable.proc; p < &ptable.proc[NPROC]; p++)
-//		if(p->state == SLEEPING && p->chan == chan){
-//			p->state = RUNNABLE;
-//			break;//just wake one
-//		}
-//}
+void
+cwakeup1(void *chan)
+{
+	struct proc *p;
+
+	for(p = ptable.proc; p < &ptable.proc[NPROC]; p++)
+		if(p->state == SLEEPING && p->chan == chan){
+			p->state = RUNNABLE;
+			break;//just wake one
+		}
+}
 
 // Wake up all processes sleeping on chan.
 void

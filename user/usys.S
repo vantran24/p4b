@@ -35,4 +35,4 @@ SYSCALL(join)
 //new syscalls
 SYSCALL(test)
 SYSCALL(csleep)
-SYSCALL(wakeup1)
+SYSCALL(cwakeup1)
